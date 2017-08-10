@@ -1,0 +1,22 @@
+Conditionner une listbox (ListBox2) avec la selection d'une précedente listbox (ListBox1)
+
+Private Sub Listebox1_Click()
+
+Select Case Listbox1.Value
+    Case "Item1"
+        Me.ListBox2.List = Worksheets("ws").ListObjects("table1").DataBodyRange.Value
+    
+    Case "Item2"
+        Me.ListBox2.List = Worksheets("ws").ListObjects("table2").DataBodyRange.Value
+        
+    Case "Item3"
+        Me.ListBox2.List = Worksheets("ws").ListObjects("table3").DataBodyRange.Value
+        
+    Case "Item4"
+        Me.ListBox2.List = Worksheets("ws").ListObjects("table4").DataBodyRange.Value
+        
+    Case "Item5"
+        Me.ListBox2.List = Worksheets("ws").ListObjects("table5").DataBodyRange.Value
+End Select
+
+End Sub
